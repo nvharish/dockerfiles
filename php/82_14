@@ -1,0 +1,19 @@
+FROM alpine:latest
+
+RUN apk update && \
+    apk add --no-cache \
+    php \
+    php-fpm \
+    php-ctype \
+    php-iconv \
+    php-session \
+    php-simplexml \
+    php-tokenizer \
+    php-mbstring \
+    php-openssl \
+    php-phar \
+    php-xml \
+    php-opcache \
+    && rm -rf /var/cache/apk/* /tmp/*
+
+CMD ["php", "-v"]
