@@ -1,0 +1,14 @@
+# Base image
+FROM alpine:3.19.0
+
+# Install prerequisites and nginx
+RUN apk update && \
+    apk add --no-cache \
+    openssl \
+    curl \
+    ca-certificates \
+    nginx && \
+    rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
+
+# Start Nginx in the foreground
+CMD ["nginx", "-g", "daemon off;"]
