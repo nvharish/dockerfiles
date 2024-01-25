@@ -23,4 +23,4 @@ Welcome to the Dockerfiles repository! Here, you'll find Dockerfiles for differe
 To build a Docker image, navigate to the directory of the desired language or web server and use the following command:
 
 ```bash
-docker build -t <image-name> .
+docker run <image-name>
