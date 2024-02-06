@@ -41,6 +41,7 @@ Replace <host-port> and <container-port> with the desired port mappings, and <im
 - Node.js: Dockerfile for Node.js with npm.
 - PHP: Dockerfile for PHP-FPM with composer.
 - Nginx: Dockerfile for the Nginx web server.
+- MySQL: Dockerfile for the MySQL database.
 
 Feel free to explore each subdirectory for detailed instructions on building and running Docker images for specific programming languages and web servers.
 
