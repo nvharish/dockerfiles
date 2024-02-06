@@ -15,4 +15,4 @@ This Docker image provides a minimalistic installation of MySQL based on Alpine 
 You can pull the latest version of this image from Docker Hub using the following command:
 
 ```bash
-docker pull yourusername/mysql:latest
+docker pull nvharish/mysql-alpine:latest
