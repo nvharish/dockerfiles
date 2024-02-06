@@ -1,0 +1,16 @@
+# base image
+FROM alpine:latest
+
+# install mysql
+RUN apk update && \
+    apk add --no-cache mysql && \
+    rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
+
+# set up working directory
+WORKDIR /usr/local/mysql
+
+# expose MySQL port
+EXPOSE 3306
+
+# configure MySQL to start when the container starts
+CMD ["mysqld", "--user=mysql"]

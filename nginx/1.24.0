@@ -7,7 +7,7 @@ RUN apk update && \
     openssl \
     curl \
     ca-certificates \
-    nginx && \
+    nginx=1.24.0-r15 && \
     rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
 # Start Nginx in the foreground
