@@ -1,0 +1,15 @@
+# base image
+FROM alpine:3.19.0
+
+# install nodejs and npm
+RUN apk update && \
+    apk add --no-cache \
+    nodejs=20.11.0-r0 \
+    npm=10.2.5-r0 && \
+    rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
+
+# expose node server port
+EXPOSE 3000
+
+# check node version
+CMD [ "node", "-v" ]

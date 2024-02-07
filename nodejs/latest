@@ -1,0 +1,15 @@
+# base image
+FROM alpine:latest
+
+# install nodejs and npm
+RUN apk update && \
+    apk add --no-cache \
+    nodejs \
+    npm && \
+    rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
+
+# expose node server port
+EXPOSE 3000
+
+# check node version
+CMD [ "node", "-v" ]
